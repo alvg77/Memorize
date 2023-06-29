@@ -26,11 +26,11 @@ struct EmojiMemoryGameView: View {
                 .bold()
                 .foregroundColor(game.color)
             
-            AspectVGrid (items: game.cards, aspectRatio: 2/3, content: { card in
-                cardView(for: card)
-            })
+            AspectVGrid (items: game.cards, aspectRatio: 2/3, content: { card in cardView(for: card) })
             .foregroundColor(game.color)
+            
             Spacer()
+            
             Text("Score: \(game.score)")
                 .font(.title2)
                 .padding(.bottom)

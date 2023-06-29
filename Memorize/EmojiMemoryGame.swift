@@ -31,7 +31,7 @@ class EmojiMemoryGame: ObservableObject {
     init() {
         EmojiMemoryGame.createTheme("Vehicles", emojis: EmojiMemoryGame.vehicleEmojis, numberOfPairs: 6)
         EmojiMemoryGame.createTheme("Expressions", emojis: EmojiMemoryGame.expressionEmojis, numberOfPairs: 8)
-        EmojiMemoryGame.createTheme("Jobs", emojis: EmojiMemoryGame.jobEmojis, numberOfPairs: 9)
+        EmojiMemoryGame.createTheme("Jobs", emojis: EmojiMemoryGame.jobEmojis, numberOfPairs: 4)
         
         
         (model, theme) = EmojiMemoryGame.createModel()
