@@ -26,8 +26,8 @@ struct EmojiMemoryGameView: View {
                 .bold()
                 .foregroundColor(game.color)
             
-            AspectVGrid (items: game.cards, aspectRatio: 2/3, content: { card in cardView(for: card) })
-            .foregroundColor(game.color)
+            AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in cardView(for: card) }
+                .foregroundColor(game.color)
             
             Spacer()
             
@@ -47,10 +47,10 @@ struct EmojiMemoryGameView: View {
         } label: {
             ZStack {
                 Rectangle()
-                    .frame(width: 200, height: 100)
+                    .frame(width: EmojiMemoryGameConstants.newGameButtonWidth, height: EmojiMemoryGameConstants.newGameButtonHeight)
                     .foregroundColor(game.color)
-                    .cornerRadius(10)
-                    .padding(.all, 15)
+                    .cornerRadius(EmojiMemoryGameConstants.newGameButtonCornerRadius)
+                    .padding(.all, EmojiMemoryGameConstants.newGameButtonPadding)
                 Text("New Game")
                     .font(.largeTitle)
                     .foregroundColor(.white)
@@ -66,6 +66,13 @@ struct EmojiMemoryGameView: View {
             .onTapGesture {
                 game.chooseCard(card)
             }
+    }
+    
+    private struct EmojiMemoryGameConstants {
+        static let newGameButtonWidth: CGFloat = 200
+        static let newGameButtonHeight: CGFloat = 100
+        static let newGameButtonCornerRadius: CGFloat = 12
+        static let newGameButtonPadding: CGFloat = 16
     }
 }
 

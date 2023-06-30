@@ -42,10 +42,10 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let cornerRadius: CGFloat = 10
-        static let shapeStrokeBorderWidth: CGFloat = 3
+        static let cornerRadius: CGFloat = 12
+        static let shapeStrokeBorderWidth: CGFloat = 4
         static let fontScale: CGFloat = 0.6
         static let pieOpacity: CGFloat = 0.5
-        static let piePadding: CGFloat = 5
+        static let piePadding: CGFloat = 8
     }
 }

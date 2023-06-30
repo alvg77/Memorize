@@ -12,9 +12,13 @@ class EmojiMemoryGame: ObservableObject {
     typealias Theme = MemoryGame<String>.Theme
     
     private static var themes: [Theme] = []
+    
+    
     private static var vehicleEmojis = ["🚗", "🛴", "✈️", "🛵", "⛵️", "🚎", "🚐", "🚛", "🛻", "🏎", "🚂", "🚊", "🚀", "🚁", "🚢", "🛶", "🛥", "🚞", "🚟", "🚃"]
     private static let expressionEmojis = ["😀", "🤣", "🤬", "🥰", "💀", "🫥", "😈", "😘", "🤯", "🫣", "😜", "🥺", "😰", "😶‍🌫️", "🤡", "🫡", "🫣"]
     private static let jobEmojis = ["🧙‍♂️", "👳‍♂️", "👨🏿‍💻", "👲", "🎅🏻", "🥷🏻"]
+    
+    
     
     private static let colors = ["yellow", "green", "red", "orange", "blue", "gray", "purple"]
     

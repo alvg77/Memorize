@@ -23,8 +23,7 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
             // we put a VStack here so we take up all the space offered by the geometry reader as the vstack is flexible
             VStack {
                 let width: CGFloat = calculateSize(numberOfItems: items.count, in: geometry.size, aspectRatio: aspectRatio)
-                LazyVGrid(columns: [getGridItem(width: width)], spacing: 0
-                ) {
+                LazyVGrid(columns: [getGridItem(width: width)], spacing: 0) {
                     ForEach(items) { item in
                         content(item).aspectRatio(aspectRatio, contentMode: .fit)
                     }
@@ -41,9 +40,9 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
     
     // add a column -> calculate width -> calculate heigth from aspectRatio and width -> check if numOfItems * heigth is less than the available space, if so -> get out, if not continue
     private func calculateSize(numberOfItems: Int, in size: CGSize, aspectRatio: CGFloat) -> CGFloat {
-        
         var columnCount = 1
         var rowCount = numberOfItems
+        
         repeat {
             let itemWidth = size.width / CGFloat(columnCount)
             let itemHeigth = itemWidth / aspectRatio
