@@ -1,3 +1,3 @@
 # Memorize-iOS
 
-## Emoji memory game written in swift
+Emoji memory game written in swift
